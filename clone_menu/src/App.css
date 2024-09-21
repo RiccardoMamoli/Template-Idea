@@ -1,0 +1,29 @@
+p {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* NAVBAR */
+
+.custom-button-navbar {
+  background-color: transparent !important;
+  border: none;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.background-click {
+  background-color: #888B8F !important;
+  transition: 200ms ease;
+}
+
+.button-container {
+  padding: 7px;
+  background-color: rgb(60, 60, 60);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
