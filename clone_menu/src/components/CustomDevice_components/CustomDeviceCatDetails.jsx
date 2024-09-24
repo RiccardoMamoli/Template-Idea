@@ -35,14 +35,14 @@ const CustomDeviceCatDetails = ({ decrementItem, removeItem, incrementItem, setC
 
         antipasti_e_tempure: [
             {
-                name: 'EDAMAME',
+                name: 'EDAMAME SEMPLICI',
                 price: 2.00,
                 img: imageEdamame,
                 quantity: 1
 
             },
             {
-                name: 'EDAMAME SPICY',
+                name: 'EDAMAME SPICY E LIME',
                 price: 2.50,
                 img: imageEdaSpciy,
                 quantity: 1
@@ -84,7 +84,7 @@ const CustomDeviceCatDetails = ({ decrementItem, removeItem, incrementItem, setC
                 quantity: 1
             },
             {
-                name: 'POLLO CURRY',
+                name: 'POLLO AL CURRY E LIME',
                 price: 3.80,
                 img: imagePolloCurry,
                 quantity: 1
