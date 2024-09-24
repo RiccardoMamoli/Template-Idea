@@ -42,8 +42,8 @@ const CustomDevice = ({ device }) => {
                         <CustomDeviceNavbar />
                         <CustomDeviceMenuCat />
                         <Routes>
-                            <Route path="/" element={<CustomDeviceHomePage />} />
-                            <Route path="category/:categoryName" element={<CustomDeviceCatDetails decrementItem={decrementItem} removeItem={removeItem} incrementItem={incrementItem} setClick={setClick} />} />
+                            <Route path="/" element={<CustomDeviceHomePage device={device} />} />
+                            <Route path="category/:categoryName" element={<CustomDeviceCatDetails device={device} decrementItem={decrementItem} removeItem={removeItem} incrementItem={incrementItem} setClick={setClick} />} />
                             <Route path="/cart" element={<CustomDeviceCart device={device} decrementItem={decrementItem} removeItem={removeItem} incrementItem={incrementItem} setClick={setClick} />} />
                         </Routes>
                     </div>

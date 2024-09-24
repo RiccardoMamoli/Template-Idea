@@ -17,7 +17,7 @@ import imageFermi from '../../img/bianchi_fermi1.jpeg'
 import { Link } from "react-router-dom";
 
 
-const CustomDeviceHomePage = () => {
+const CustomDeviceHomePage = ({ device }) => {
 
     const arrayOfCat = [
 
@@ -98,13 +98,15 @@ const CustomDeviceHomePage = () => {
         },
     ]
 
+    const screen = device ? '3' : '1'; 
+
     return (
         <>
             <Container className="m-0 p-0 pt-4">
                 <Row>
                     {
                         arrayOfCat.map((cat, index) => (
-                            <Col xs={6} sm={6} md={6} lg={4} className={`col ${index >= arrayOfCat.length - 3? '': 'pb-4'}`}>
+                            <Col xs={6} sm={6} md={6} lg={4} className={`col ${index >= arrayOfCat.length - screen ? '': 'pb-4'}`}>
                                 <Link to={`category/${cat.link}`} className="text-decoration-none text-light">
                                     <div className="single-cat-card">
                                         <div className="img-cat-box">

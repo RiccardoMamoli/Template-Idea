@@ -7,6 +7,7 @@ const CustomDeviceCart = ({ decrementItem, removeItem, incrementItem, device }) 
     const cartTotal = useSelector((store) => store.cart.items);
     const cartTotalValue = cartTotal.reduce((acc, item) => acc + (item.price * item.quantity), 0);
 
+    console.log('tipo', typeof device)
 
     return (
         <>

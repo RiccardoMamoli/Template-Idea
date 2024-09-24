@@ -21,7 +21,7 @@ import imageUdonMare from '../../img/img_singole/UDON-MARE_LD.jpg';
 import { useDispatch, useSelector } from 'react-redux';
 import { addToCartAction, } from '../../redux/actions';
 
-const CustomDeviceCatDetails = ({ decrementItem, removeItem, incrementItem, setClick}) => {
+const CustomDeviceCatDetails = ({ decrementItem, removeItem, incrementItem, setClick, device}) => {
 
     const foodItems = {
         poke: [
@@ -154,6 +154,8 @@ const CustomDeviceCatDetails = ({ decrementItem, removeItem, incrementItem, setC
 
     }
 
+    const screen = device ? '3' : '1'; 
+
 
     return (
         <>
@@ -168,7 +170,7 @@ const CustomDeviceCatDetails = ({ decrementItem, removeItem, incrementItem, setC
                             const quantity = cartItem ? cartItem.quantity : 0;
 
                             return (
-                                <Col xs={6} sm={6} md={6} lg={4} className={`col ${selectedFoodItems.length > 3 && index < selectedFoodItems.length - 3? 'pb-4': ''}`} key={food.name}>
+                                <Col xs={6} sm={6} md={6} lg={4} className={`col ${selectedFoodItems.length > screen && index < selectedFoodItems.length - screen ? 'pb-4': ''}`} key={food.name}>
                                     <div className="single-cat-card">
                                         <div className="img-cat-box">
                                             <img src={food.img} alt={food.name} />
