@@ -208,14 +208,14 @@ header {
 
 .img-cat-box {
   height: 100px;
+}
 
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-  }
+.img-cat-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 
 
@@ -225,13 +225,13 @@ header {
 .img-box-cart {
   width: 60px;
   height: 60px;
+}
 
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 8px;
-  }
+.img-box-cart img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 .cart-total-display {
