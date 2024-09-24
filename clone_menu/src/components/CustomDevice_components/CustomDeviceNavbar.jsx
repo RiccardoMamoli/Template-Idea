@@ -11,8 +11,7 @@ const CustomDeviceNavbar = () => {
             <div className="navbar-tablet">
                 <div style={{ cursor: "pointer" }}>
                     <Link to="/" className="text-decoration-none text-light">
-
-                        <p> your logo here</p>
+                        <p> home</p>
                     </Link>
                 </div>
                 <div style={{ cursor: "pointer", position: "relative" }}>

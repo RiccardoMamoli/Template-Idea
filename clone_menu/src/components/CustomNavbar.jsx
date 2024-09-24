@@ -8,13 +8,10 @@ const CustomNavbar = ({device, changeDevice}) => {
 
     return (
         <>
-            <Navbar className="bg-dark">
+            <Navbar>
                 <Container>
                     <Link className="text-decoration-none" to="/">
                         <Navbar.Brand className="text-light">Menu Idea</Navbar.Brand>
-                    </Link>
-                    <Link className="text-decoration-none" to="/info">
-                        <Button className="custom-button-navbar"> Info</Button>
                     </Link>
                     <Navbar.Toggle />
                     <Navbar.Collapse className="justify-content-end">

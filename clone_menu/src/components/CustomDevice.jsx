@@ -9,9 +9,11 @@ import { useDispatch } from "react-redux";
 import { useState } from "react";
 import { decrementQuantityAction, incrementQuantityAction, removeFromCartAction } from "../redux/actions";
 
-const CustomDevice = ({ device }) => {
-    const dispatch = useDispatch()
 
+const CustomDevice = ({ device }) => {
+
+
+    const dispatch = useDispatch()
     const [click, setClick] = useState([]);
     const decrementItem = (item, index) => {
         dispatch(decrementQuantityAction(item))
@@ -42,7 +44,7 @@ const CustomDevice = ({ device }) => {
                         <Routes>
                             <Route path="/" element={<CustomDeviceHomePage />} />
                             <Route path="category/:categoryName" element={<CustomDeviceCatDetails decrementItem={decrementItem} removeItem={removeItem} incrementItem={incrementItem} setClick={setClick} />} />
-                            <Route path="/cart" element={<CustomDeviceCart decrementItem={decrementItem} removeItem={removeItem} incrementItem={incrementItem} setClick={setClick} />} />
+                            <Route path="/cart" element={<CustomDeviceCart device={device} decrementItem={decrementItem} removeItem={removeItem} incrementItem={incrementItem} setClick={setClick} />} />
                         </Routes>
                     </div>
 

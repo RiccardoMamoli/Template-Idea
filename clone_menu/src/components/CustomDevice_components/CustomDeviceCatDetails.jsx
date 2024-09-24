@@ -13,6 +13,11 @@ import imageJalaTemp from '../../img/img_singole/JALAPENO-IN-TEMPURA_LD.jpg';
 import imagePepTemp from '../../img/img_singole/PEPERONE-IN-TEMPURA.jpg';
 import imageInvVeggie from '../../img/img_singole/INVOLTINO-VEGGIE-TERIYAKI_LD.jpg';
 import imagePolloCurry from '../../img/img_singole/POLLO-CRUNCY_LD.jpg';
+import imageRavVerdure from '../../img/img_singole/DUMPLING_VERDURE_OLIO-AL-DRAGONCELLO-CAVOLO-NERO_LD.jpg';
+import imageRavMaiale from '../../img/img_singole/DUMPLING-DI-MAIALE_TERIAKI_ERBA_CIPOLLINA-LD.jpg';
+import imageRavGamberi from '../../img/img_singole/DUMPLING-DI-GAMBERI-LD.jpg';
+import imageUdonSpada from '../../img/img_singole/UDON-AL-WOK-PESCE-SPADA.jpg';
+import imageUdonMare from '../../img/img_singole/UDON-MARE_LD.jpg';
 import { useDispatch, useSelector } from 'react-redux';
 import { addToCartAction, } from '../../redux/actions';
 
@@ -27,6 +32,7 @@ const CustomDeviceCatDetails = ({ decrementItem, removeItem, incrementItem, setC
                 quantity: 1
             },
         ],
+
         antipasti_e_tempure: [
             {
                 name: 'EDAMAME',
@@ -84,6 +90,52 @@ const CustomDeviceCatDetails = ({ decrementItem, removeItem, incrementItem, setC
                 quantity: 1
             },
         ],
+
+        primi_e_ravioli: [
+
+            {
+                name: 'RAVIOLI DI VERDURE',
+                price: 3.00,
+                img: imageRavVerdure,
+                quantity: 1
+            },
+
+            {
+                name: 'RAVIOLI DI MAIALE',
+                price: 3.00,
+                img: imageRavMaiale,
+                quantity: 1
+            },
+
+            {
+                name: 'RAVIOLI DI GAMBERI',
+                price: 3.00,
+                img: imageRavGamberi,
+                quantity: 1
+            },
+
+            {
+                name: 'UDON PESCE SPADA',
+                price: 5.50,
+                img: imageUdonSpada,
+                quantity: 1
+            },
+
+            {
+                name: 'UDON PESCE MISTO',
+                price: 5.50,
+                img: imageUdonMare,
+                quantity: 1
+            },
+
+            {
+                name: 'UDON CON POLLO',
+                price: 4.50,
+                img: imageUdonMare,
+                quantity: 1
+            },
+
+        ]
     };
 
 
@@ -127,21 +179,21 @@ const CustomDeviceCatDetails = ({ decrementItem, removeItem, incrementItem, setC
                                                     <p>{food.name}</p>
                                                 </div>
                                                 <div className='d-flex align-items-center justify-content-center'>
-                                                    <p>{food.price}€</p>
+                                                    <p>{food.price.toFixed(2)}€</p>
                                                 </div>
                                                 <div className='py-2 d-flex align-items-center justify-content-center'>
                                                     {quantity > 0 ? (
                                                         <div className='quantity-button'>
-                                                            <div className='px-1' style={{ cursor: "pointer" }} onClick={() => {
+                                                            <div className='px-1 d-flex align-items-center' style={{ cursor: "pointer" }} onClick={() => {
                                                                 quantity === 1 ? removeItem(food) : decrementItem(food);
                                                             }}
                                                             >
                                                                 <TiMinus />
                                                             </div>
-                                                            <div className='px-1'>
+                                                            <div className='px-1 d-flex align-items-center'>
                                                                 {quantity}
                                                             </div>
-                                                            <div className='px-1' style={{ cursor: "pointer" }} onClick={() => incrementItem(food)}>
+                                                            <div className='px-1 d-flex align-items-center' style={{ cursor: "pointer" }} onClick={() => incrementItem(food)}>
                                                                 <FaPlus />
                                                             </div>
                                                         </div>

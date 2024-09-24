@@ -2,7 +2,6 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
 import CustomNavbar from './components/CustomNavbar';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import CustomInfo from './components/CustomInfo';
 import Home from './components/Home';
 import { useState } from 'react';
 import CustomDeviceCatDetails from './components/CustomDevice_components/CustomDeviceCatDetails';
@@ -27,7 +26,6 @@ function App() {
             <Route path="category/:categoryName" element={<CustomDeviceCatDetails />} />
             <Route path="/cart" element={<CustomDeviceCart />} />
           </Route>
-          <Route path='/info' element={<CustomInfo />} />
         </Routes>
       </BrowserRouter>
     </>
