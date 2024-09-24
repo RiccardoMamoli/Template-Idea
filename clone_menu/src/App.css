@@ -303,6 +303,15 @@ header {
     border-radius: 8px;
   }
 
+  .custom-button-navbar {
+    background-color: transparent !important;
+    border: none;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
 
 
 }
