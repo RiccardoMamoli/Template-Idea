@@ -4,8 +4,34 @@ import CustomDeviceMenuCat from "./CustomDevice_components/CustomDeviceMenuCat";
 import CustomDeviceHomePage from "./CustomDevice_components/CustomDeviceHomePage";
 import { Route, Routes } from "react-router-dom";
 import CustomDeviceCatDetails from "./CustomDevice_components/CustomDeviceCatDetails";
+import CustomDeviceCart from "./CustomDevice_components/CustomDeviceCart";
+import { useDispatch } from "react-redux";
+import { useState } from "react";
+import { decrementQuantityAction, incrementQuantityAction, removeFromCartAction } from "../redux/actions";
 
 const CustomDevice = ({ device }) => {
+    const dispatch = useDispatch()
+
+    const [click, setClick] = useState([]);
+    const decrementItem = (item, index) => {
+        dispatch(decrementQuantityAction(item))
+        setClick(prevState => {
+            const newClickedItems = [...prevState];
+            newClickedItems[index] = false;
+            return newClickedItems;
+        });
+
+    }
+
+    const removeItem = (item) => {
+        dispatch(removeFromCartAction(item))
+    }
+
+    const incrementItem = (item) => {
+        dispatch(incrementQuantityAction(item))
+    }
+
+
     return (
         <>
             <Col className="text-white d-flex align-items-center justify-content-center pt-4">
@@ -15,7 +41,8 @@ const CustomDevice = ({ device }) => {
                         <CustomDeviceMenuCat />
                         <Routes>
                             <Route path="/" element={<CustomDeviceHomePage />} />
-                            <Route path="category/:categoryName" element={<CustomDeviceCatDetails />} />
+                            <Route path="category/:categoryName" element={<CustomDeviceCatDetails decrementItem={decrementItem} removeItem={removeItem} incrementItem={incrementItem} setClick={setClick} />} />
+                            <Route path="/cart" element={<CustomDeviceCart decrementItem={decrementItem} removeItem={removeItem} incrementItem={incrementItem} setClick={setClick} />} />
                         </Routes>
                     </div>
 
