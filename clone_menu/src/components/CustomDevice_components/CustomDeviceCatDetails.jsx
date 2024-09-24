@@ -163,12 +163,12 @@ const CustomDeviceCatDetails = ({ decrementItem, removeItem, incrementItem, setC
             <Container className="m-0 p-0">
                 <Row>
                     {
-                        selectedFoodItems.map((food) => {
+                        selectedFoodItems.map((food, index) => {
                             const cartItem = cartItems.find(item => item.name === food.name);
                             const quantity = cartItem ? cartItem.quantity : 0;
 
                             return (
-                                <Col xs={6} sm={6} md={6} lg={4} className="col pb-4" key={food.name}>
+                                <Col xs={6} sm={6} md={6} lg={4} className={`col ${selectedFoodItems.length > 3 && index < selectedFoodItems.length - 3? 'pb-4': ''}`} key={food.name}>
                                     <div className="single-cat-card">
                                         <div className="img-cat-box">
                                             <img src={food.img} alt={food.name} />
