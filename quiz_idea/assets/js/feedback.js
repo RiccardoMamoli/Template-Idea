@@ -42,5 +42,5 @@ function cambiaPagina() {
 }
 
 function returnWelcome() {
-  window.location.href = "welcome-page.html";
+  window.location.href = "index.html";
 }
