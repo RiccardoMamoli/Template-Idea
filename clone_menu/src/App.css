@@ -22,7 +22,7 @@ header {
 .custom-button-navbar {
   background-color: transparent !important;
   border: none;
-  width: 150px;
+  width: 150px !important;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -277,7 +277,33 @@ header {
   }
 }
 
+@media screen and (min-width: 200px) and (max-width: 760px) {
+
+  .single-cat-card {
+    height: 175px;
+  }
+
+  .quantity-button {
+    width: 120px !important;
+  }
+
+  .add-to-cart-button {
+    width: 120px !important;
+    background-color: rgb(75, 75, 75);
+    border: none;
+
+  }
+  
+}
+
 @media screen and (min-width: 300px) and (max-width: 1200px) {
+
+  .card-description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+  }
 
   .img-box-cart {
     width: 60px;
@@ -304,7 +330,6 @@ header {
   }
 
   .custom-button-navbar {
-    background-color: transparent !important;
     border: none;
     width: 100%;
     display: flex;

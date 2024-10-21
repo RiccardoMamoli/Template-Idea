@@ -36,7 +36,7 @@ const CustomDevice = ({ device }) => {
 
     return (
         <>
-            <Col className="text-white d-flex align-items-center justify-content-center pt-4">
+            <Col className="text-white d-flex align-items-center justify-content-center pt-0 pt-md-4">
                 <div className={`custom-tablet ${device ? 'tablet-size' : 'phone-size'}`}>
                     <div className="custom-tablet-screen">
                         <CustomDeviceNavbar />
